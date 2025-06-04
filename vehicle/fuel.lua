@@ -12,7 +12,6 @@ function GetFuel(fs, vehicle)
         return exports[fs]:GetFuel(vehicle)
     elseif fs == "ti_fuel" then
         local level, fuelType = exports["ti_fuel"]:getFuel(vehicle)
-        TriggerServerEvent("dabz_lib:server:save-ti-fuel-type", DL.Vehicle.GetPlate(vehicle), fuelType)
         return level
     elseif fs == "ox_fuel" or fs == "Renewed-Fuel" then
         return GetVehicleFuelLevel(vehicle)
@@ -34,7 +33,6 @@ function SetFuel(fs, vehicle, fuel)
         or fs == "myFuel" or fs == "Renewed-Fuel" then
         exports[fs]:SetFuel(vehicle, fuel)
     elseif fs == "ti_fuel" then
-        local fuelType = lib.callback.await("dabz_lib:server:get-ti-fuel-type", false, DL.Vehicle.GetPlate(vehicle))
         exports["ti_fuel"]:setFuel(vehicle, fuel, fuelType or nil)
     elseif fs == "ox_fuel" then
         Entity(vehicle).state.fuel = fuel
