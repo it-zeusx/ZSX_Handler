@@ -82,5 +82,10 @@ function SetFuel(fs, vehicle, fuel)
     end
 end
 
-exports('GetFuel', GetFuel)
-exports('SetFuel', SetFuel)
+return {
+    GetFuel = GetFuel,
+    SetFuel = SetFuel,
+}
+
+-- exports('GetFuel', GetFuel)
+-- exports('SetFuel', SetFuel)

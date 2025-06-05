@@ -172,7 +172,9 @@ function GetVehicleLabel(model)
     return label
 end
 
-exports('GetVehicleLabel', GetVehicleLabel)
-exports('GetPlate', GetPlate)
-exports('SetVehicleProperties', SetVehicleProperties)
-exports('GetVehicleProperties', GetVehicleProperties)
+
+
+-- exports('GetVehicleLabel', GetVehicleLabel)
+-- exports('GetPlate', GetPlate)
+-- exports('SetVehicleProperties', SetVehicleProperties)
+-- exports('GetVehicleProperties', GetVehicleProperties)

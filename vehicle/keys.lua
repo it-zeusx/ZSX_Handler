@@ -100,5 +100,10 @@ function RemoveKeys(vk, plate, vehicleEntity, origin)
     end
 end
 
-exports('GiveKeys', GiveKeys)
-exports('RemoveKeys', RemoveKeys)
+return {
+    GiveKeys = GiveKeys
+    RemoveKeys = RemoveKeys,
+}
+
+-- exports('GiveKeys', GiveKeys)
+-- exports('RemoveKeys', RemoveKeys)
